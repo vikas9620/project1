@@ -31,7 +31,7 @@ for (var i=0; i<items.length; i++){
     items[i].style.color = "lightgreen"
 }
 
-*/
+
 var secondItem = document.querySelector(".list-group-item:nth-child(2)")
 secondItem.style.backgroundColor = "green"
 var thirdItem = document.querySelector(".list-group-item:nth-child(3)")
@@ -44,4 +44,33 @@ var odd = document.querySelectorAll("li:nth-child(odd)")
 for(let i=0;i<odd.length;i++){
     odd[i].style.backgroundColor = "green"
 }
+*/
+var itemList = document.querySelector('#items')
+itemList.parentElement.style.backgroundColor = "green"
+console.log(itemList.parentElement.parentElement.parentElement)
 
+
+itemList.children[1].style.backgroundColor = "yellow"
+
+itemList.firstElementChild.textContent = 'hello world item 1'
+
+itemList.lastElementChild.textContent = 'hello 4'
+
+itemList.previousElementSibling.style.color = "green"
+
+var newDiv = document.createElement("div")
+
+newDiv.className = "hello"
+newDiv.id = 'hello1'
+
+newDiv.setAttribute("title", "hello div")
+
+var newDivText = document.createTextNode('hello world')
+
+newDiv.appendChild(newDivText)
+
+var container = document.querySelector('header .container')
+var h1 = document.querySelector('header h1')
+var h2 = document.querySelector('items h2')
+newDiv.style.fontSize = "30px"
+container.insertBefore(newDiv, h1)
