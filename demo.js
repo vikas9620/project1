@@ -114,6 +114,17 @@ function addItem(e){
 
   // Append li to list
   itemList.appendChild(li);
+  var editBtn = document.createElement('button');
+  editBtn.appendChild(document.createTextNode('Edit'));
+  li.appendChild(editBtn);
+
+  var searchBox = document.createElement('textarea');
+  searchBox.textContent = "Enter Description";
+  searchBox.rows="1";
+  searchBox.className = 'description';
+  searchBox.id = 'info';
+  li.appendChild(searchBox);
+  itemList.appendChild(li);
 }
 
 // Remove item
